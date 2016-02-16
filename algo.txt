@@ -1,0 +1,22 @@
+algo :
+* check execution-policy :
+	 get-executionpolicy, set-executionpolicy restricted unrestricted
+	 warning: do not end the script abruptly (security warning)
+	** separate script checks for execution policy ** **tobemade**
+* get device to share : ethernet or wifi 
+* get source 
+
+* a c++ code would check for available configurations, and call the powershell script with respective arguments
+* 
+
+* required files 
+	* configs.txt : contain all configurations
+	* script.ps1 : main powershell script
+
+** for c++ code :
+	* check for execution poilicy and configuration files at startup and exit (#pragma)
+	* a required configuration is selected or a new configuration is created 
+	* the variables created after all manipulations are stored intact as powershell script
+** configuration file:
+	first line : integer telling the total number of configurations
+	all configurations are structure variables, written to a binary file
